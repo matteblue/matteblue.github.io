@@ -2,10 +2,14 @@
   "name": "matteblue",
   "private": true,
   "version": "0.0.0",
+  "homepage": "http://matteblue.github.io/",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -r origin -d dist"
   },
   "dependencies": {
     "react": "^18.0.0",
@@ -16,6 +20,7 @@
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
     "autoprefixer": "^10.4.24",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",
     "vite": "^2.9.15"
