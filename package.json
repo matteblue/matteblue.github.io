@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "homepage": "http://matteblue.github.io/",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,8 +11,10 @@
     "deploy": "gh-pages -r origin -d dist"
   },
   "dependencies": {
+    "lucide-react": "^1.8.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^7.14.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
