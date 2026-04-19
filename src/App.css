@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components {
-    .app-container {
-        @apply min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4;
+    .app-wrapper {
+        @apply min-h-screen flex flex-col;
     }
+
+    .app-container {
+        @apply flex-1 bg-[var(--color-ice)] flex flex-col items-center justify-center p-4;
+    }
+
+    /* .app-container {
+        @apply min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4;
+    } */
 
     .card {
         @apply bg-white rounded-xl shadow-lg p-8 max-w-sm w-full text-center border border-gray-200;
@@ -16,96 +25,33 @@
             hover:bg-blue-700 transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
     }
 
+    .home-div {
+        @apply mx-24;
+    }
+
+    .home-title-div {
+        @apply mb-12;
+    }
+
     .title {
-        @apply text-3xl font-bold text-gray-800 mb-2;
+        @apply text-5xl font-prata text-[var(--color-navy-like-blue)] mb-3;
     }
 
     .subtitle {
         @apply text-gray-600 text-lg;
     }
 
-    /* Navbar */
-    /* .navbar {
-        @apply bg-white border-b border-gray-200 sticky top-0 z-10;
+    .typewrite {
+        @apply text-3xl font-prata text-[var(--color-navy-like-blue)] border-r-4 border-[var(--color-slate)] cursor-animation mb-2;
     }
 
-    .navbar-inner {
-        @apply max-w-5xl mx-auto px-6 h-14 flex items-center justify-between;
-    }
-
-    .navbar-logo {
-        @apply text-lg font-semibold text-gray-800;
-    }
-
-    .navbar-links {
-        @apply flex items-center gap-6;
-    }
-
-    .navbar-link {
-        @apply text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150 no-underline;
-    }
-
-    .navbar-link.active {
-        @apply text-gray-900 font-medium;
-    } */
-
-    /* Hamburger — mobile only */
-    /* .hamburger {
-        @apply hidden flex-col justify-center gap-[5px] p-2 cursor-pointer bg-transparent border-none;
-    }
-
-    .ham-line {
-        @apply block w-5 h-[2px] bg-gray-700 rounded transition-all duration-300;
-    } */
-
-    /* Sidebar */
-    /* .sidebar {
-        @apply fixed top-0 left-0 h-full w-64 bg-white border-r border-gray-200 z-40
-        -translate-x-full transition-transform duration-300 ease-in-out;
-    }
-
-    .sidebar-open {
-        @apply translate-x-0;
-    }
-
-    .sidebar-header {
-        @apply h-14 flex items-center px-6 border-b border-gray-200;
-    }
-
-    .sidebar-links {
-        @apply flex flex-col gap-1 p-4;
-    }
-
-    .sidebar-links .navbar-link {
-        @apply px-3 py-2 rounded-lg hover:bg-gray-100;
-    }
-
-    .sidebar-backdrop {
-        @apply fixed inset-0 bg-black/30 z-30;
-    } */
-
-    /* Responsive: switch to hamburger on mobile */
-    /* @media (max-width: 640px) {
-        .desktop-links {
-            @apply hidden;
-        }
-
-        .hamburger {
-            @apply flex;
-        }
-    } */
-
-    .app-wrapper {
-        @apply min-h-screen flex flex-col;
-    }
-
-    .app-container {
-        @apply flex-1 bg-gray-100 flex flex-col items-center justify-center p-4;
+    .description {
+        @apply flex text-lg font-prata text-[var(--color-navy-like-blue)] mb-2;
     }
 
     /* Top navbar */
     .navbar {
-        @apply bg-white border-b border-gray-200 sticky top-0 z-10;
+        @apply bg-[var(--color-light-blue-grey)] border-b border-gray-200 sticky top-0 z-10;
     }
 
     .navbar-inner {
@@ -142,7 +88,7 @@
     }
 
     .bottom-link span {
-        @apply text-[11px];
+        @apply text-[11px] font-[var(--font-noto-sans-display)];
     }
 
     .bottom-link.active {
@@ -159,13 +105,17 @@
             hover:bg-blue-700 transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
     }
 
-    .title {
+    .socials {
+        @apply mt-4 flex flex-row flex-wrap gap-4;
+    }
+
+    /* .title {
         @apply text-3xl font-bold text-gray-800 mb-2;
     }
 
     .subtitle {
         @apply text-gray-600 text-lg;
-    }
+    } */
 
     /* Responsive */
     @media (max-width: 640px) {
@@ -180,5 +130,20 @@
         .app-container {
             @apply pb-16; /* prevent content from hiding behind the bar */
         }
+
+        .description {
+            @apply text-base;
+        }
+    }
+}
+
+@layer utilities {
+
+    @keyframes blink {
+        50% { border-color: transparent; }
+    }
+
+    .cursor-animation {
+        animation: blink 0.7s infinite;
     }
 }

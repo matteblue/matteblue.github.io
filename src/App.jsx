@@ -1,9 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
-import './App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
 import Portfolio from './components/Portfolio'
+import './App.css'
+import './Colors.css'
+import './Fonts.css'
 
 function App() {
   return (
@@ -12,8 +14,8 @@ function App() {
       <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </div>

@@ -14,8 +14,8 @@ function Navbar() {
                     <NavLink to="/" className="navbar-logo">Matteblue</NavLink>
                     <div className="navbar-links">
                         <NavLink to="/" className={navLinkClass}>Home</NavLink>
-                        <NavLink to="/about" className={navLinkClass}>About</NavLink>
                         <NavLink to="/portfolio" className={navLinkClass}>Portfolio</NavLink>
+                        <NavLink to="/about" className={navLinkClass}>About</NavLink>
                     </div>
                 </div>
             </nav>
@@ -26,13 +26,13 @@ function Navbar() {
                     <House color='black'/>
                     <span>Home</span>
                 </NavLink>
-                <NavLink to="/about" className={bottomLinkClass}>
-                    <Info color='black'/>
-                    <span>About</span>
-                </NavLink>
                 <NavLink to="/portfolio" className={bottomLinkClass}>
                     <FolderCode color='black'/>
                     <span>Portfolio</span>
+                </NavLink>
+                <NavLink to="/about" className={bottomLinkClass}>
+                    <Info color='black'/>
+                    <span>About</span>
                 </NavLink>
             </nav>
         </>

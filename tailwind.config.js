@@ -6,7 +6,12 @@ module.exports = {
     "./src/**/*.css",
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            prata: ['var(--font-prata)'],
+            lato: ['var(--font-lato)'],
+        }
+    },
   },
   plugins: [],
 }
